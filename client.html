@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Cliente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="welcome-message" id="welcome-message"></div>
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="logout()">Logout</a>
+                <a href="#">Settings</a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <h2>Pagina de Cliente</h2>
+            <h3>Catálogo de productos</h3>
+            <ul id="product-catalog"></ul>
+            <h3>Carrito de Compras</h3>
+            <ul id="shopping-cart"></ul>
+        </div>
+    </div>
+    <script src="client.js"></script>
+</body>
+</html>

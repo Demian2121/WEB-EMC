@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administrador</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        .centered-title {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .container, .slide-in {
+            max-width: 50%;
+            margin: 0 auto;
+        }
+        .welcome-message {
+            font-size: 24px;
+            margin-left: 20px;
+        }
+        
+        .dropdown {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="welcome-message" id="welcome-message"></div>
+        <div class="dropdown">
+            <button class="dropbtn" href="#" onclick="logout()">Menu</button>
+        </div>
+    </div>
+
+    <h1 class="centered-title">Pagina del Administrador</h1>
+
+    <div class="content">
+        <div class="container">
+            <h2>Panel Administrativo</h2>
+            <nav>
+                <button class="blue-button" onclick="showSection('add')">Agregar Producto</button>
+                <button class="blue-button" onclick="showSection('delete')">Borrar Producto</button>
+                <button class="blue-button" onclick="showSection('view')">Ver Producto</button>
+            </nav>
+            <div id="add" class="section">
+                <form id="product-form">
+                    <input type="text" id="product-name" placeholder="Nombre de producto" required>
+                    <input type="number" id="product-price" placeholder="Precio de producto" required>
+                    <button type="submit" class="blue-button">Agregar Producto</button>
+                </form>
+            </div>
+            <div id="delete" class="section" style="display: none;">
+                <h3>Borrar producto</h3>
+                <ul id="product-list-delete"></ul>
+            </div>
+            <div id="view" class="section" style="display: none;">
+                <h3>Lista de Producto</h3>
+                <ul id="product-list-view"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="../log/admin.js"></script>
+</body>
+</html>
